@@ -11,15 +11,10 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
         box-shadow: 0px 0px 16px rgba(0,0,0,0.5);
-    }
-
-    .top-nav-collapse {
-        padding: 0;
     }
 }
 
@@ -35,10 +30,10 @@ html {
 }
 
 .intro-section {
-    height: 100%;
+    height: calc(100% - 60px) !important;
     padding-top: 150px;
     text-align: center;
-    background: url(../img/background.jpg) fixed center center no-repeat;
+    background: url(../img/background.jpg) fixed left bottom no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -75,10 +70,15 @@ html {
     margin-bottom: 50px;
 }
 
+.container-page {
+    padding-top: 150px;
+    text-align: center;
+}
+
 //* Intro section *//
 
 .container-intro {
-    padding-top: 200px;
+    padding-top: 150px;
     text-align: center;
 }
 
@@ -88,7 +88,7 @@ html {
 
 .intro-head {
     color: #fff;
-    margin-top: 200px;
+    margin-top: 150px;
     font-size: 50px;
 }
 
