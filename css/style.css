@@ -101,7 +101,6 @@ html {
 
 .wrapper {
 	display: block;
-  width:99.6%;
   margin:0.2%;
 }
 
@@ -215,6 +214,10 @@ footer a {
     color: #fff;
     background-color: rgba(255, 0, 0, 0.6);
     cursor: pointer;
+}
+
+.a-band {
+    color: #fff;
 }
 
 footer a:hover {
