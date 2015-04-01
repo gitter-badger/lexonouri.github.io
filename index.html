@@ -33,7 +33,7 @@
     <title>PPG-Husaria</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="./css/style.css" rel="stylesheet">
@@ -62,27 +62,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">PPG-Husaria</a>
+                <a class="navbar-brand" id="intro-btn" href="#intro">PPG-Husaria</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right wrapper">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
+                        <a class="page-scroll" href="#top"></a>
                     </li>
-                    <li class="navbar-element ripplelink">
-                        <a class="page-scroll" href="#about">About</a>
+                    <li id="blog-btn" class="navbar-element ripplelink">
+                        <a class="" href="#blog">Blog</a>
                     </li>
-                    <li class="navbar-element ripplelink">
-                        <a class="page-scroll" href="#team">Team</a>
+                    <li id="about-btn" class="navbar-element ripplelink">
+                        <a class="" href="#about">About</a>
                     </li>
-                    <li class="navbar-element ripplelink">
-                        <a class="page-scroll" href="#projects">Projects</a>
+                    <li id="team-btn" class="navbar-element ripplelink">
+                        <a class="" href="#team">Team</a>
                     </li>
-                    <li class="navbar-element ripplelink">
-                        <a class="page-scroll" href="#forum">Forum</a>
+                    <li id="projects-btn" class="navbar-element ripplelink">
+                        <a class="" href="#projects">Projects</a>
+                    </li>
+                    <li id="forum-btn" class="navbar-element ripplelink">
+                        <a class="" href="#forum">Forum</a>
                     </li>
                 </ul>
             </div>
@@ -90,8 +92,28 @@
         </div>
         <!-- /.container -->
     </nav>
+    
+    
     <!-- Intro Section -->
-    <section id="intro" class="post-section">
+    <section id="intro" class="intro-section">
+        <div class="intro">
+            <div class="container container-intro">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="intro-head">PPG-Husaria</h1>
+                        <hr>
+                        <p class="intro-sub">Polish Programming Group</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Posts section -->
+    <section id="blog" class="post-section">
+        <!-- Sample post -->
         <div class="container container-blog">
             <div class="row">
                 <div class="col-lg-12">
@@ -99,18 +121,81 @@
                     <span class="post-icon fa-stack">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                    </span>
-                        Title</h1>
+                    </span>Blog</h1>
                     <hr>
                     <p style="margin: 0 20px 0 20px; font-size: 20px; text-align: left">Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br></p>
                     <hr>
-<p style="margin: 0 10px 20px 10px; float: left; text-align: left; font-size: 15px;">Author: <b>Mateusz 'Lexonouri' Janota</b></p>
+<p style="margin: 0 10px 20px 10px; float: left; text-align: left; font-size: 15px;">Author: <b>Lexonouri</b></p>
+<p style="margin: 0 10px 20px 10px; float: right; text-align: right; font-size: 15px;">Date: <b>31-03-2015</b></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sample post -->
+        <div class="container container-blog">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 style="text-align: left; vertical-align: middle; line-height: 20px; font-size: 35px;">
+                    <span class="post-icon fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                    </span>Blog</h1>
+                    <hr>
+                    <p style="margin: 0 20px 0 20px; font-size: 20px; text-align: left">Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br></p>
+                    <hr>
+<p style="margin: 0 10px 20px 10px; float: left; text-align: left; font-size: 15px;">Author: <b>Lexonouri</b></p>
+<p style="margin: 0 10px 20px 10px; float: right; text-align: right; font-size: 15px;">Date: <b>31-03-2015</b></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sample post -->
+        <div class="container container-blog">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 style="text-align: left; vertical-align: middle; line-height: 20px; font-size: 35px;">
+                    <span class="post-icon fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                    </span>Blog</h1>
+                    <hr>
+                    <p style="margin: 0 20px 0 20px; font-size: 20px; text-align: left">Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br></p>
+                    <hr>
+<p style="margin: 0 10px 20px 10px; float: left; text-align: left; font-size: 15px;">Author: <b>Lexonouri</b></p>
+<p style="margin: 0 10px 20px 10px; float: right; text-align: right; font-size: 15px;">Date: <b>31-03-2015</b></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sample post -->
+        <div class="container container-blog">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 style="text-align: left; vertical-align: middle; line-height: 20px; font-size: 35px;">
+                    <span class="post-icon fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                    </span>Blog</h1>
+                    <hr>
+                    <p style="margin: 0 20px 0 20px; font-size: 20px; text-align: left">Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br>Content</br></p>
+                    <hr>
+<p style="margin: 0 10px 20px 10px; float: left; text-align: left; font-size: 15px;">Author: <b>Lexonouri</b></p>
 <p style="margin: 0 10px 20px 10px; float: right; text-align: right; font-size: 15px;">Date: <b>31-03-2015</b></p>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- Footer section -->
+
+    <footer id="footer" class="footer">
+        <div class="container text-left">
+            <p>Copyright &copy; PPG-Husaria 2015.
+                <a>Privacy Policy</a>
+                <a>Cookies Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -120,6 +205,7 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/ui.js"></script>
+    <script src="js/core.js"></script>
     <script>
     /*jQuery*/
 

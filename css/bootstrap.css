@@ -3914,15 +3914,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li > a:hover {
   border-color: #eee #eee #ddd;
 }
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-  color: #555;
-  cursor: default;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-bottom-color: transparent;
-}
+
 .nav-tabs.nav-justified {
   width: 100%;
   border-bottom: 0;
@@ -4248,6 +4240,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+      z-index:1000;
+    box-shadow:rgba(0, 0, 0, 0.3) 0 3px 3px 0;
+    -webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 3px 3px 0;
+    -moz-box-shadow:rgba(0, 0, 0, 0.3) 0 3px 3px 0;
   }
 }
 .navbar-form {
