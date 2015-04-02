@@ -5,9 +5,15 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    return render('../index.html')
+    return HttpResponse('PPG-Husaria\nSite under building.')
 
 
 def db(request):
-    return render('../index.html', 'db.html')
+
+    greeting = Greeting()
+    greeting.save()
+
+    greetings = Greeting.objects.all()
+
+    return render(request, 'db.html', {'greetings': greetings})
 
