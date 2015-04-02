@@ -3,8 +3,10 @@ var buttonFor = function(x){
 	return x+buttonPostfix;
 };
 
+var initialSection = "#intro";
+
 $("section").hide();
-$("#intro").show();
+$(initialSection).show();
 $("#footer").show();
 
 var lastClickedButton = "#"+buttonFor("intro");
@@ -17,9 +19,11 @@ $.each($('section'), function(){
 		$(lastViewedSelection).hide();
 		lastViewedSelection = "#"+actualSection;
 		$(lastViewedSelection).show();
+
 		
 		$(lastClickedButton).removeClass('navbar-element-active').addClass('navbar-element');
 		lastClickedButton = "#"+this.id;
-		$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active');
+		if(lastViewedSelection != initialSection)
+			$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active');
 	});
 });
