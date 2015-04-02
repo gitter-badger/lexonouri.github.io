@@ -35,7 +35,7 @@ html {
 }
 
 .intro-section {
-    height: calc(100% - 60px) !important;
+    height: 100%;
     padding-top: 100px;
     min-height: 400px;
     text-align: center;
@@ -73,7 +73,7 @@ html {
 .container-blog {
     border: 1px solid rgba(0,0,0,0.2);
     box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .container-page {
@@ -202,14 +202,31 @@ body {
 
 //* Footer section *//
 
-footer {
-    padding: 50px 0;
+.footer {
     bottom: 0px;
-    position: absolute;
+    left: 0px;
+    position: fixed;
+    background-color: rgba(255,255,255,1);
+    z-index: 1000;
+    height: 100%;
+    width: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 1);
 }
 
-footer p {
-    margin: 20px;
-    position: absolute;
-    bottom: 0px;
+.containter-footer {
+    display: table;
+    content: " ";
+    background: rgba(255,255,255,1);
+}
+
+.footer p {
+    position: fixed;
+    vertical-align: middle;
+    padding: 20px;
+    bottom: -20px;
+    left: 0px;
+    height: 70px;
+    width: 100%;
+    background: rgba(255,255,255,1);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
