@@ -1,129 +1,25 @@
-//init
+var buttonPostfix = "-btn";
+var buttonFor = function(x){
+	return x+buttonPostfix;
+};
 
-$("#intro").show()
-$("#blog").hide()
-$("#about").hide()
-$("#team").hide()
-$("#projects").hide()
-$("#forum").hide()
-$("#contact").hide()
+$("section").hide();
+$("#intro").show();
+$("#footer").show();
 
-$("#intro-btn").click(function(){
-    $("#intro").show()
-    $("#intro-btn").removeClass('active')
-    $("#blog").hide()
-    $("#blog-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#about").hide()
-    $("#about-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#team").hide()
-    $("#team-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#projects").hide()
-    $("#projects-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#forum").hide()
-    $("#forum-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#contact").hide()
-    $("#contact-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").show()
-})
+var lastClickedButton = "#"+buttonFor("intro");
+var lastViewedSelection = "#intro";
 
-$("#blog-btn").click(function(){
-    $("#blog").show()
-    $("#blog-btn").removeClass('navbar-element').removeClass('active').addClass('navbar-element-active')
-    $("#intro").hide()
-    $("#about").hide()
-    $("#about-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#team").hide()
-    $("#team-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#projects").hide()
-    $("#projects-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#forum").hide()
-    $("#forum-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#contact").hide()
-    $("#contact-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").hide()
-})
-
-$("#about-btn").click(function(){
-    $("#about").show()
-    $("#about-btn").removeClass('navbar-element').removeClass('active').addClass('navbar-element-active')
-    $("#intro").hide()
-    $("#blog").hide()
-    $("#blog-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#team").hide()
-    $("#team-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#projects").hide()
-    $("#projects-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#forum").hide()
-    $("#forum-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#contact").hide()
-    $("#contact-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").hide()
-})
-
-$("#team-btn").click(function(){
-    $("#team").show()
-    $("#team-btn").removeClass('navbar-element').removeClass('active').addClass('navbar-element-active')
-    $("#intro").hide()
-    $("#blog").hide()
-    $("#blog-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#about").hide()
-    $("#about-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#projects").hide()
-    $("#projects-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#forum").hide()
-    $("#forum-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#contact").hide()
-    $("#contact-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").hide()
-})
-
-$("#projects-btn").click(function(){
-    $("#projects").show()
-    $("#projects-btn").removeClass('navbar-element').removeClass('active').addClass('navbar-element-active')
-    $("#intro").hide()
-    $("#blog").hide()
-    $("#blog-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#team").hide()
-    $("#team-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#about").hide()
-    $("#about-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#forum").hide()
-    $("#forum-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#contact").hide()
-    $("#contact-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").hide()
-})
-
-$("#forum-btn").click(function(){
-    $("#forum").show()
-    $("#forum-btn").removeClass('navbar-element').removeClass('active').addClass('navbar-element-active')
-    $("#intro").hide()
-    $("#blog").hide()
-    $("#blog-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#team").hide()
-    $("#team-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#about").hide()
-    $("#about-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#projects").hide()
-    $("#projects-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#contact").hide()
-    $("#contact-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").hide()
-})
-
-$("#contact-btn").click(function(){
-    $("#contact").show()
-    $("#contact-btn").removeClass('navbar-element').removeClass('active').addClass('navbar-element-active')
-    $("#intro").hide()
-    $("#blog").hide()
-    $("#blog-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#team").hide()
-    $("#team-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#about").hide()
-    $("#about-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#projects").hide()
-    $("#projects-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#forum").hide()
-    $("#forum-btn").removeClass('navbar-element-active').removeClass('active').addClass('navbar-element')
-    $("#footer").hide()
-})
+$.each($('section'), function(){
+	$("#"+buttonFor(this.id)).click(function(){
+		var actualButton = this.id;
+		var actualSection = actualButton.substr(0, actualButton.lastIndexOf(buttonPostfix));
+		$(lastViewedSelection).hide();
+		lastViewedSelection = "#"+actualSection;
+		$(lastViewedSelection).show();
+		
+		$(lastClickedButton).removeClass('navbar-element-active').addClass('navbar-element');
+		lastClickedButton = "#"+this.id;
+		$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active');
+	});
+});
