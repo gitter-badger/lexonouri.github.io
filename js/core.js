@@ -22,9 +22,9 @@ $.each($('section'), function(){
 		$(lastViewedSelection).show();
 
 		if(lastClickedButton !== initialButton)
-			$(lastClickedButton).removeClass('navbar-element-active active').addClass('navbar-element');
+			$(lastClickedButton).removeClass('navbar-element-active active').addClass('navbar-element ripplelink');
 		lastClickedButton = "#"+this.id;
 		if(lastViewedSelection !== initialSection)
-			$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active active');
+			$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active active ripplelink');
 	});
 });
