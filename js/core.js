@@ -4,6 +4,7 @@ var buttonFor = function(x){
 };
 
 var initialSection = "#intro";
+var initialButton = "#"+buttonFor(initialSection.substr(1));
 
 $("section").hide();
 $(initialSection).show();
@@ -20,10 +21,10 @@ $.each($('section'), function(){
 		lastViewedSelection = "#"+actualSection;
 		$(lastViewedSelection).show();
 
-		
-		$(lastClickedButton).removeClass('navbar-element-active').addClass('navbar-element');
+		if(lastClickedButton !== initialButton)
+			$(lastClickedButton).removeClass('navbar-element-active').addClass('navbar-element');
 		lastClickedButton = "#"+this.id;
-		if(lastViewedSelection != initialSection)
-			$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active');
+		if(lastViewedSelection !== initialSection)
+			$(lastClickedButton).removeClass('navbar-element').addClass('navbar-element-active active');
 	});
 });
