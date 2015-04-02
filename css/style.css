@@ -90,11 +90,14 @@ html {
     color: #fff;
     margin-top: 150px;
     font-size: 50px;
+    text-shadow: rgba(0, 0, 0, 0.6) 2px 3px 3px;
 }
 
 .intro-sub {
-    color: #fff;
+    color: rgba(255, 0, 0, 1);
     font-size: 20px;
+    text-shadow: rgba(0, 0, 0, 0.6) 2px 3px 3px;
+}
 }
 
 //* Android 5 'Lolipop' Effect *//
