@@ -9,6 +9,10 @@ html {
     height: 100%;
 }
 
+.logo {
+    text-shadow: 2px 3px 3px rgba(255,255,255,0.5);
+}
+
 @media(min-width:767px) {
     .navbar {
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
