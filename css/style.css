@@ -87,8 +87,9 @@ html {
 }
 
 .intro-head {
+    min-height: 400px;
     color: #fff;
-    margin-top: 10%;
+    top: 60px;
     font-size: 50px;
     text-shadow: rgba(0, 0, 0, 0.6) 2px 3px 3px;
 }
