@@ -21,10 +21,30 @@ html {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+.social {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+}
+
+.social-icon {
+    margin: auto;
+}
+
+.social:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
 .teammate {
     padding: 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin: 4%;
+}
+
+.project {
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 4%;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.3);
 }
 
 @media(min-width:767px) {
@@ -40,9 +60,6 @@ html {
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: -2px;
-}
-
-.fa-stack {
     font-size: 20px;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
@@ -74,6 +91,10 @@ html {
     background-color: rgba(0, 0, 0, 0.1);
     margin: 0px 10px 0px 20px;
     box-shadow: 3px 6px 6px rgba(0,0,0,0.5);
+}
+
+.project-image {
+    margin: auto;
 }
 
 .navbar-element:hover {
