@@ -102,6 +102,7 @@ html {
 .container-page {
     padding-top: 150px;
     text-align: center;
+    margin-top: -70px;
 }
 
 //* Intro section *//
