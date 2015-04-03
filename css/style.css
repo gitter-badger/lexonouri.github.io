@@ -17,6 +17,8 @@ html {
 .avatar {
     border-radius: 100%;
     box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .teammate {
@@ -61,6 +63,16 @@ html {
     height: 100%;
     padding-top: 150px;
     text-align: center;
+}
+
+.post-image {
+    text-align: left;
+    float: left;
+    height: 140px;
+    width: 300px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0px 10px 0px 20px;
 }
 
 .navbar-element:hover {
